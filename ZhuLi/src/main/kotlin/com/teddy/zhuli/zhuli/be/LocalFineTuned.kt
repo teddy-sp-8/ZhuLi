@@ -1,6 +1,5 @@
 package com.teddy.zhuli.zhuli.be
 
-import com.teddy.zhuli.zhuli.be.Backend
 import com.teddy.zhuli.zhuli.util.HttpJson
 import org.json.JSONObject
 
@@ -18,7 +17,7 @@ class LocalFineTunedBackend(
             .put("top_p", 0.95)
             .toString()
 
-        val body = HttpJson.postJson("$url/generate", payload)
+        val body = HttpJson.post("$url/generate", payload)
 
         val json = JSONObject(body)
         return json.getString("code")

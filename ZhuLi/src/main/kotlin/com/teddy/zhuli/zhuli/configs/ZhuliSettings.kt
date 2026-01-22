@@ -6,22 +6,22 @@ data class ZhuliSettings(
     val backendType: BackendType,
     val ollamaUrl: String,
     val ollamaModel: String,
-    val localModelUrl: String,
-    val deepseekUrl: String,
-    val deepseekModel: String,
-    val deepseekApiKey: String
+    val pythonUrl: String,
+    val remoteApiUrl: String,
+    val remoteApiKey: String,
+    val remoteModel: String
 ) {
     companion object {
         fun get(): ZhuliSettings {
-            val s = ZhuliSettingsState.getInstance().state
+            val s = ZhuliSettingsState.get()
             return ZhuliSettings(
                 backendType = s.backendType,
                 ollamaUrl = s.ollamaUrl,
                 ollamaModel = s.ollamaModel,
-                localModelUrl = s.localModelUrl,
-                deepseekUrl = s.deepseekUrl,
-                deepseekModel = s.deepseekModel,
-                deepseekApiKey = s.deepseekApiKey
+                pythonUrl = s.pythonUrl,
+                remoteApiUrl = s.remoteApiUrl,
+                remoteApiKey = s.remoteApiKey,
+                remoteModel = s.remoteModel
             )
         }
     }
