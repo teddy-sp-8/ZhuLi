@@ -1,0 +1,23 @@
+# IntelliJ / JetBrains junk
+.idea/
+*.iml
+ZhuLi/.kotlin/
+ZhuLi/build/
+ZhuLi/out/
+ZhuLi/.gradle/
+ZhuLi/.run/
+ZhuLi/**/idea-sandbox/
+ZhuLi/**/kotlin-compiler-*.salive
+
+# Python venv/cache
+ZhuLiOllama/.venv/
+ZhuLiOllama/__pycache__/
+ZhuLiOllama/**/*.pyc
+
+# ML outputs (do NOT push)
+ZhuLiOllama/out/
+ZhuLiOllama/data/
+ZhuLiOllama/**/*.bin
+ZhuLiOllama/**/*.pt
+ZhuLiOllama/**/*.safetensors
+ZhuLiOllama/**/checkpoint-*/
